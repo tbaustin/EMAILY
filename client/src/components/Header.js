@@ -17,6 +17,9 @@ class Header extends Component {
         );
       default:
         return [
+          <li key="5" style={{ margin: '0 10px' }}>
+            {this.props.auth.username}
+          </li>,
           <li key="2">
             <Payments />
           </li>,
@@ -31,6 +34,7 @@ class Header extends Component {
   }
 
   render() {
+    console.log(this.props.auth);
     return (
       <nav>
         <div className="nav-wrapper">
